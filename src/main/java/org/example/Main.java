@@ -41,8 +41,10 @@ public class Main {
         //people.stream().map(Person::getName).forEach(System.out::println);
 
         String s = "{[]}";
-        isValidParentheses(s);
+        //isValidParentheses(s);
 
+        int[] prices = {7,1,5,3,6,4};
+        findMaxMin(prices);
 
     }
 
@@ -112,5 +114,11 @@ public class Main {
         return stack.empty();
     }
 
-
+    public static void findMaxMin(int[] prices){
+        List<Integer> priceList = Arrays.stream(prices).boxed().toList();
+        int max = priceList.stream().max(Comparator.naturalOrder()).get();
+        int idxMax = priceList.indexOf(max);
+        int min = priceList.stream().min(Comparator.naturalOrder()).get();
+        int idxMin = priceList.indexOf(min);
+    }
 }
