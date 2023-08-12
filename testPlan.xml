@@ -1,0 +1,29 @@
+
+<suite name="Suite1" verbose="1" >
+    <test name="example" >
+        <classes>
+            <class name="org.example.HookTest" >
+                <methods>
+                    <include name="TC01" />
+                    <include name="TC02" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="theInternet">
+        <classes>
+            <class name="theInternet.LoginTest"/>
+            <class name="theInternet.CheckboxTest">
+                <methods>
+                    <exclude name="validateCheckboxIsChecked" />
+                </methods>
+            </class>
+            <class name="org.example.HookTest">
+                <methods>
+                    <include name="TC03" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
