@@ -1,0 +1,36 @@
+<suite name="Bmi CrossBrowser" verbose="1" >
+
+    <test name="Chrome" >
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="pageObjectModel.BMITest">
+                <methods>
+                    <include name="bmiTestPOM" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Firefox" >
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="pageObjectModel.BMITest">
+                <methods>
+                    <include name="bmiTestPOM" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Safari" >
+        <parameter name="browser" value="safari"/>
+        <classes>
+            <class name="pageObjectModel.BMITest">
+                <methods>
+                    <include name="bmiTestPOM" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

@@ -1,22 +1,23 @@
 package pages;
 
+import common.Browser;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class BMIPage {
-    WebDriver driver;
-    By metricUnitTab = By.id("menuon");
-    By clearButton = By.cssSelector("img.clearbtn");
-    By ageTextBox = By.id("cage");
-    By heightTextBox = By.id("cheightmeter");
-    By weightTextBox = By.id("ckg");
-    By femaleRadioButton = By.xpath("//input[@id='csex2']/following-sibling::span");
-    By maleRadioButton = By.xpath("//input[@id='csex1']/following-sibling::span");
-    By calculateButton = By.xpath("//input[@value='Calculate']");
-    By resultLabel = By.cssSelector("div.rightresult div > b");
+    private WebDriver driver;
+    private By metricUnitTab = By.id("menuon");
+    private By clearButton = By.cssSelector("img.clearbtn");
+    private By ageTextBox = By.id("cage");
+    private By heightTextBox = By.id("cheightmeter");
+    private By weightTextBox = By.id("ckg");
+    private By femaleRadioButton = By.xpath("//input[@id='csex2']/following-sibling::span");
+    private By maleRadioButton = By.xpath("//input[@id='csex1']/following-sibling::span");
+    private By calculateButton = By.xpath("//input[@value='Calculate']");
+    private By resultLabel = By.cssSelector("div.rightresult div > b");
 
-    public BMIPage(WebDriver driver) {
-        this.driver = driver;
+    public BMIPage() {
+        this.driver = Browser.getDriver();
     }
 
     public void selectMetricTab(){
