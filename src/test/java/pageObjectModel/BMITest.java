@@ -42,7 +42,7 @@ public class BMITest extends BaseTest {
         Assert.assertEquals(expectedResult,bmiPage.getResult());
     }
 
-    @Test
+/*    @Test
     public void bmiTestLinear(){
 
         WebDriver driver = Browser.getDriver();
@@ -65,7 +65,7 @@ public class BMITest extends BaseTest {
         System.out.println(result);
 
         Assert.assertEquals("BMI = 22 kg/m2",result);
-    }
+    }*/
 
 
 

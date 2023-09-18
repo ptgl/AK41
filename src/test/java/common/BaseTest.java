@@ -13,7 +13,6 @@ import java.io.File;
 import java.io.IOException;
 
 public class BaseTest {
-    protected WebDriver driver;
     @AfterMethod
     public void captureScreen(ITestResult testResult) throws IOException {
         if(!testResult.isSuccess()){

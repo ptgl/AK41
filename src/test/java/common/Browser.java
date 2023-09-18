@@ -1,12 +1,14 @@
 package common;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.safari.SafariDriver;
 
 import java.io.File;
@@ -14,6 +16,7 @@ import java.io.IOException;
 
 public class Browser {
     private static WebDriver driver;
+    private static Actions action;
 
     public static WebDriver getDriver() {
         return driver;
@@ -36,6 +39,7 @@ public class Browser {
             default:
                 throw new IllegalArgumentException(browser+" is not supported!!");
         }
+        action = new Actions(driver);
     }
 
     public static void open(String url){
@@ -51,5 +55,16 @@ public class Browser {
         File destFile = new File("./target/screenshot/"+filename);
         FileUtils.copyFile(file, destFile);
     }
+
+    public static void hoverElement(By locator){
+        action.moveToElement(driver.findElement(locator)).perform();
+    }
+
+    public static void doubleClickElement(By locator){
+        action.doubleClick(driver.findElement(locator)).perform();
+    }
+
+
+
 
 }
