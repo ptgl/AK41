@@ -1,0 +1,7 @@
+<suite name="todoMVC Test" verbose="1" >
+    <test name="todoTest" >
+        <classes>
+            <class name="theInternet.TodoTest"/>
+        </classes>
+    </test>
+</suite>

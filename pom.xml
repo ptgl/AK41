@@ -44,7 +44,7 @@
                 <version>3.1.2</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>bmi-test-crossbrowser.xml</suiteXmlFile>
+                        <suiteXmlFile>${test.suite}</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
