@@ -21,4 +21,4 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: run test
-      run: mvn test -Dtest.suite=todoMVC-plan.xml
+      run: mvn clean
