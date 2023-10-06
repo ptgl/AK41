@@ -21,4 +21,4 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: run test
-      run: mvn clean
+      run: mvn clean test
